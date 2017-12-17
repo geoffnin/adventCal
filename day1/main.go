@@ -65,7 +65,6 @@ func sumPart2(input string) (output int) {
 	list := makeIntList(input)
 
 	pairs := pairs(list, func(input []int, i int) []int {
-
 		return []int{input[i], input[(i+(len(input)/2))%len(input)]}
 	})
 	filtered := filter(pairs, func(input []int) bool {
